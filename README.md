@@ -9,8 +9,7 @@ The Delay and Sum beamfomer implememnted with Matlab uses a virtual Projection P
 
 ![alt text](img2.png)
 
-
-IMAGE ACC
+![alt text](img3.png)
 
 ## Thanks
 Thanks to [Jørgen Grythe](https://github.com/jorgengrythe/beamforming) for his RAW data for microphone array.
