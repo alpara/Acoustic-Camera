@@ -15,7 +15,7 @@ The microphone array geometry.
 
 ![alt text](img2.png)
 
-Rendering time for one 800x800 image is approx 10h on Apple M1 (no parallalization)
+Rendering time for one 800x800 image is approx 10h on Apple M1 (no parallelization)
 
 ![alt text](img3.png)
 
