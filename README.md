@@ -11,11 +11,11 @@ The concept of the virtual projection plane.
 
 ![alt text](img1.gif)
 
-The microphone array geomety.
+The microphone array geometry.
 
 ![alt text](img2.png)
 
-Rendering time for one 400 x 400 image is approx 2.5h on Apple M1.
+Rendering time for one 400x400 image is approx 2.5h on Apple M1.
 
 ![alt text](img3.png)
 
