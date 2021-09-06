@@ -7,7 +7,8 @@ The Delay and Sum beamfomer implememnted with Matlab uses a virtual Projection P
 
 ![alt text](img1.gif)
 
-IMAGE ARRAY
+![alt text](img2.png)
+
 
 IMAGE ACC
 
