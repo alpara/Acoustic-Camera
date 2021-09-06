@@ -7,9 +7,15 @@ The Delay and Sum beamfomer implememnted with Matlab uses a virtual Projection P
 
 <img src="img0.gif" width="400" height="400" />
 
+The concept of the virtual projection plane.
+
 ![alt text](img1.gif)
 
+The microphone array geomety.
+
 ![alt text](img2.png)
+
+Rendering time for one 400 x 400 image is approx 2.5h on Apple M1.
 
 ![alt text](img3.png)
 
