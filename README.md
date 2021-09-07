@@ -19,5 +19,9 @@ The rendering time for the 800x800 image below is approx 10h on Apple M1 (one im
 
 ![alt text](img3.png)
 
+The recordings where made with an Norsonics Nor848A.
+
+![alt text](img4.png)
+
 ## Thanks
 Thanks to [Jørgen Grythe](https://github.com/jorgengrythe/beamforming) for his RAW data of the microphone array.
