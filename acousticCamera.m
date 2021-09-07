@@ -26,7 +26,7 @@ speedOfSound = (331.5 + 0.6*temperature);
 projectionPlaneDistance = 3;             % Z in meter
 projectionPaneWidth     = 4;             % X in meter
 projectionPaneHeight    = 4;             % Y in meter
-projectionPaneDelta     = 0.1;           % Δ in meter (influences the image size)
+projectionPaneDelta     = 0.01;          % Δ in meter (influences the image size)
 samplesPerImage         = 1000;          % in samples (aka window size)
 
 
@@ -66,10 +66,10 @@ title('Microphone Array Geometry (in meter)')
 % 2.1) calculate the computation times for the APPLE M1 computer
 timeImage = numSamples * projectionPaneWidth/projectionPaneDelta * projectionPaneHeight/projectionPaneDelta / 3e6;
 s = seconds(timeImage); s.Format = 'hh:mm:ss';
-fprintf("Estimated Computation Duration for ONE image :" + char(s) + " (hh:mm:ss)\n");
+fprintf("Estimated Computation Duration for ONE image :" + char(s) + " (hh:mm:ss) without Parallelization\n");
 timeVideo = numSamples / samplesPerImage * timeImage;
 s = seconds(timeVideo); s.Format = 'hh:mm:ss';
-fprintf("Estimated Computation Duration for ALL images:" + char(s) + " (hh:mm:ss)\n");
+fprintf("Estimated Computation Duration for ALL images:" + char(s) + " (hh:mm:ss) without Parallelization\n");
 
 
 %% 3.) VIRTUAL PROJECTION PLANE - raytracing the virtual projection plane
