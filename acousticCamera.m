@@ -79,7 +79,7 @@ disp("Image Dimension: " + imageDimX + "x" + imageDimY);
 numImages = floor(numSamples / samplesPerImage)-1; % number of image
 
 %% 3.1) PARRALELIZATION LOOP - windowing over the images
-parfor image = 1:numImages                                                             % loop over the images=windows (***PARRALELIZED START***)
+parfor image = 1:numImages                                                             % loop over the images=windows (PARRALELISATION START)
     sampleOffset = image * samplesPerImage; % window begin in samples
     yImage = 0;  % counts over the width of the image
     xImage = 0;  % counts over the height of the image
@@ -117,7 +117,7 @@ parfor image = 1:numImages                                                      
     IMAGE = IMAGE ./ max(IMAGE(:)) .* 256;
     filename = [sprintf('img%03d',image) '.png'];
     imwrite(IMAGE, jet(256), ['images/',filename]);
-end %images/offset/windows                                                                                       (***PARRALELIZED END***)
+end %images/offset/windows                                                                                            (PARRALELISATION END)
 
 
 %% 4.) GENERATE THE MOVIE
