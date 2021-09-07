@@ -9,7 +9,7 @@ The Delay and Sum beamfomer implememnted with Matlab uses a virtual Projection P
 
 The concept of the virtual projection plane.
 
-![alt text](img1.gif)
+![alt text](img1.png)
 
 The geometry of the microphone array.
 
