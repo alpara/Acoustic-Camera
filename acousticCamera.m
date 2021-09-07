@@ -30,7 +30,7 @@ projectionPaneDelta     = 0.01;          % Δ in meter (influences the image siz
 samplesPerImage         = 1000;          % in samples (aka window size)
 
 
-%% 1.) RAW DATA
+%% 1.) RAW DATA AND METADATA
 % parse the microphone array raw data
 % 1.1) open the array metadata JSON file and extract the microphone array recording metadata
 fid = fopen('data/MicrophoneArrayData.json');
@@ -55,7 +55,7 @@ numSamples = length(mic(1).samples);                    % CONSTANT the total num
 audiowrite("data/sample.wav",data(100,:)/10000.0,sampleRate) % save one test channel
 
 
-%% 2.) PLOT ARRAY
+%% 2.) PLOT THE ARRAY AND CALCULATE ETA
 % 2.1) plot the geometry of the microphone array
 for m = 1:numChannels
     plotX(m) = mic(m).x;
@@ -67,9 +67,9 @@ title('Microphone Array Geometry (in meter)')
 timeImage = numSamples * projectionPaneWidth/projectionPaneDelta * projectionPaneHeight/projectionPaneDelta / 3e6;
 s = seconds(timeImage); s.Format = 'hh:mm:ss';
 fprintf("Estimated Computation Duration for ONE image :" + char(s) + " (hh:mm:ss) without Parallelization\n");
-timeVideo = numSamples / samplesPerImage * timeImage;
+timeVideo = numSamples / samplesPerImage * timeImage / 8; % assume 8 computation CORES here
 s = seconds(timeVideo); s.Format = 'hh:mm:ss';
-fprintf("Estimated Computation Duration for ALL images:" + char(s) + " (hh:mm:ss) without Parallelization\n");
+fprintf("Estimated Computation Duration for ALL images:" + char(s) + " (hh:mm:ss) with Parallelization\n");
 
 
 %% 3.) VIRTUAL PROJECTION PLANE - raytracing the virtual projection plane
@@ -78,8 +78,8 @@ imageDimY = projectionPaneHeight / projectionPaneDelta+1; % image height
 disp("Image Dimension: " + imageDimX + "x" + imageDimY);
 numImages = floor(numSamples / samplesPerImage)-1; % number of image
 
-%% 3.1) PARRALELIZATION LOOP - windowing over the images
-parfor image = 1:numImages                                                             % loop over the images=windows (PARRALELISATION START)
+%% 3.1) PARRALELIZATION LOOP - windowing over the images                               % loop over the images=windows (PARRALELISATION START)
+parfor image = 1:numImages
     sampleOffset = image * samplesPerImage; % window begin in samples
     yImage = 0;  % counts over the width of the image
     xImage = 0;  % counts over the height of the image
@@ -91,7 +91,7 @@ parfor image = 1:numImages                                                      
             xImage = xImage + 1; % increase image height counter
             distanceSamples = zeros(1,numChannels); % pre-allocate
             %% 3.2) DELAY (extract the distances)
-            for m = 1:numChannels                                                       % loop over the microphone channels to extarct the delay
+            for m = 1:numChannels                                                      % loop over the microphone channels to extarct the delay
                 distanceVector = [mic(m).x ,mic(m).y ,0; x ,y ,projectionPlaneDistance];
                 distanceMeter = pdist(distanceVector,'euclidean'); % distance from microphone m to the image point in the virtual projection plane
                 distanceSamples(m) = distanceMeter / speedOfSound * sampleRate; % distance in samples
