@@ -1,5 +1,5 @@
 # Acoustic-Camera
-A Matlab implementation of an Delay-Sum Acoustic **(Δ-Σ)** Camera Beamformer trough Raytracing.
+A Matlab implementation of a Delay-Sum (Δ-Σ) Acoustic Camera Beamformer trough Raytracing.
 
 ## Description
 
