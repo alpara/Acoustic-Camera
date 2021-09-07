@@ -3,7 +3,7 @@ A Matlab implementation of an Delay-Sum Acoustic **(Δ-Σ)** Camera Beamformer t
 
 ## Description
 
-The Delay and Sum beamfomer implememnted with Matlab uses a virtual Projection Plane in front of the camera. The Sample Data uses a 3 second white noise signal recorded with an 128 cannel microphone array. The Dimension and Distance of the Virtual Projection Plane can be adjusted in the constances section of the matlab script.
+The Delay and Sum beamfomer implememnted with Matlab uses a virtual Projection Plane in front of the camera. The Sample Data uses a 3 second white noise signal recorded with an 128 cannel microphone array. The Dimension and Distance of the Virtual Projection Plane can be adjusted in the constances section of the matlab script. You need the Image Processing Toolbox and the Parallel Computing Toolbox. 
 
 <img src="img0.gif" width="400" height="400" />
 
@@ -11,11 +11,11 @@ The concept of the virtual projection plane.
 
 ![alt text](img1.gif)
 
-The microphone array geometry.
+The geometry of the microphone array.
 
 ![alt text](img2.png)
 
-Rendering time for one 800x800 image is approx 10h on Apple M1 (no parallelization)
+The rendering time for the 800x800 image below is approx 10h on Apple M1 (without parallelization).
 
 ![alt text](img3.png)
 
