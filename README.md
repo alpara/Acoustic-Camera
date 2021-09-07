@@ -20,4 +20,4 @@ The rendering time for the 800x800 image below is approx 10h on Apple M1 (one im
 ![alt text](img3.png)
 
 ## Thanks
-Thanks to [Jørgen Grythe](https://github.com/jorgengrythe/beamforming) for his RAW data for microphone array.
+Thanks to [Jørgen Grythe](https://github.com/jorgengrythe/beamforming) for his RAW data of the microphone array.
