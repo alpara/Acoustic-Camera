@@ -19,7 +19,7 @@ The rendering time for the 800x800 image below is approx 10h on Apple M1 (one im
 
 ![alt text](html/img3.png)
 
-Spectrum of the input signal.
+Spectrum of the input signal (generated with [Sonogram visible speech](https://github.com/Christoph-Lauer/Sonogram)).
 
 ![alt text](html/img5.png)
 
