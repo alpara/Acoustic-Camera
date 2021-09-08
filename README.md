@@ -24,4 +24,4 @@ The recordings where made with an Norsonics Nor848A.
 ![alt text](html/img4.png)
 
 ## Thanks
-Thanks to [Jørgen Grythe](https://github.com/jorgengrythe/beamforming) from Oslo/Sweden for his RAW data of the microphone array.
+Thanks to [Jørgen Grythe](https://github.com/jorgengrythe/beamforming) from Oslo/Norway for his RAW data of the microphone array.
