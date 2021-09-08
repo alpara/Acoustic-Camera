@@ -14,8 +14,10 @@
 % @notes        note
 % @todo         finished so far
 % @copyright    Christoph Lauer
-% @license      cle commerial license
+% @license      GPL 3.0
 % @brief        This matlab file implements an Delay and Sum algorithm and generates images and a video
+% @contact      christophlauer@me.com
+% @webpage      https://christoph-lauer.github.io
 
 
 %% 0.) CONSTANTS
