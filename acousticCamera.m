@@ -77,9 +77,9 @@ imageDimY = projectionPlaneHeight / projectionPlaneDelta+1; % the image height
 disp("Image Dimension: " + imageDimX + "x" + imageDimY);
 numImages = floor(numSamples / samplesPerImage)-1; % the number of images
 
-%% 3.1) THE PARRALELIZATION LOOP - windowing over the images                           % LOOP over the images=windows (PARRALELISATION START)
+%% 3.1) THE PARRALELIZATION LOOP - windowing over the images
 parfor (image = 1:numImages)
-    sampleOffset = image * samplesPerImage; % window begin in samples
+    sampleOffset = image * samplesPerImage; % window begin in samples                  % LOOP over the images=windows (PARRALELISATION START)
     yImage = 0;  % counts over the width of the image
     xImage = 0;  % counts over the height of the image
     fprintf("Image " + image + ":");
