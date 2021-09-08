@@ -78,7 +78,7 @@ disp("Image Dimension: " + imageDimX + "x" + imageDimY);
 numImages = floor(numSamples / samplesPerImage)-1; % the number of images
 
 %% 3.1) THE PARRALELIZATION LOOP - windowing over the images                           % LOOP over the images=windows (PARRALELISATION START)
-parfor image = 1:numImages
+parfor (image = 1:numImages)
     sampleOffset = image * samplesPerImage; % window begin in samples
     yImage = 0;  % counts over the width of the image
     xImage = 0;  % counts over the height of the image
