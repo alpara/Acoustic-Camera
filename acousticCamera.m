@@ -8,10 +8,11 @@
 % @contributors persons
 % @client       company
 % @language     MATLAB R2021a (Octave) 
-% @packages     Image Processing Toolbox, Parallel Computing Toolbox...
+% @packages     none
 % @param        none
 % @return       none
-% @notes        note
+% @notes        replace PARFOR with FOR if you have no Parallel Processing
+% Toolbox       Image Processing Toolbox, Parallel Computing Toolbox...
 % @todo         finished so far
 % @copyright    Christoph Lauer
 % @license      GPL 3.0
