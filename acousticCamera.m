@@ -24,7 +24,7 @@
 % array a rectangle is projected with distance z. The rectangle has the width x and the height y. The main concept behind
 % the delay and sum algorithm is the distance of the single microphones and the discrete points of the virtual-projection-
 % plane. The projection plane is divided into discrete points with the dimension delta. The distance between the single
-% microphones and the points in the virtua projection plane can be expressed in value with the unit meter and also
+% microphones and the points in the virtual-projection-plane can be expressed in value with the unit meter and also
 % expressed in a value with the unit samples. The disatnce in METER can be converted in SAMPLES trough the speed of sound.
 % This means that the distance can be expressed as INDEX POINTER in the samples vector which allows a fast implementation
 % in c-similar languages via pointers. The delay values of the microphone array can so be shifted over the virtual-
