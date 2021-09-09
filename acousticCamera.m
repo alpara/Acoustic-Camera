@@ -7,7 +7,7 @@
 % @author       Christoph Lauer
 % @contributors persons
 % @client       company
-% @language     MATLAB (Octave)
+% @language     MATLAB R2021a (Octave) 
 % @packages     Image Processing Toolbox, Parallel Computing Toolbox...
 % @param        none
 % @return       none
@@ -18,6 +18,23 @@
 % @brief        This matlab file implements an Delay and Sum algorithm and generates images and a video
 % @contact      christophlauer@me.com
 % @webpage      https://christoph-lauer.github.io
+%
+% The matlab script is splitted in 5 parts. The main concepts used in the raytracing beamformer is the  virtual-
+% projection-pane and the delay and sum algorithm which will be described here in more detail. In front of the microphone
+% array a rectangle is projected with distance z. The rectangle has the width x and the height y. The main concept behind
+% the delay and sum algorithm is the distance of the single microphones and the discrete points of the virtual-projection-
+% plane. The projection plane is divided into discrete points with the dimension delta. The distance between the single
+% microphones and the points in the virtua projection plane can be expressed in value with the unit meter and also
+% expressed in a value with the unit samples. The disatnce in METER can be converted in SAMPLES trough the speed of sound.
+% This means that the distance can be expressed as INDEX POINTER in the samples vector which allows a fast implementation
+% in c-similar languages via pointers. The delay values of the microphone array can so be shifted over the virtual-
+% projection-plane and single image points can be sampled as ray between the SUM of all (time DELAY shifted) microphones
+% of the microphone-array. This algorithm is well known as the DELAY and SUM Algorithm (Δ-Σ). The algorithm can be found
+% in section 3 of the source code in this script. Another concept used in the script is windowing. The time aligned sample
+% vector is splitted into intervals of the window-length (no overlapping) and ONE image is generated for each time-window.
+% The virtual-projection-plane is placed symetrical arround the X and Y axis in this implementation and cannot bet shifted
+% up/down left or right. At the end of the script an movie is generated from the image sequence. To disable the
+% parallelization replace the PARFOR command in the image main loop with FOR.
 
 
 %% 0.) CONSTANTS
