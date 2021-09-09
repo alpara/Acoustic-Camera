@@ -11,7 +11,7 @@ The matlab script is splitted in 5 parts. The main concepts used in the raytraci
 
 ## Images
 
-A 400 x 400 pixel movie sequence.
+A 400 x 400 pixel image sequence movie.
 
 ![alt text](html/img0.gif)
 
