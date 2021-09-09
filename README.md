@@ -11,11 +11,11 @@ The matlab script is splitted in 5 parts. The main concepts used in the raytraci
 
 ## Images
 
-A 400 x 400 pixel image sequence movie.
+A 400x400 pixel image sequence movie.
 
 ![alt text](html/img0.gif)
 
-The concept of the virtual projection plane.
+The concept of the virtual-projection-plane.
 
 ![alt text](html/img1.png)
 
