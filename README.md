@@ -11,6 +11,8 @@ The matlab script is splitted in 5 parts. The main concepts used in the raytraci
 
 ## Images
 
+An 400 x 400 pixel movie sequence.
+
 ![alt text](html/img0.gif)
 
 The concept of the virtual projection plane.
@@ -21,7 +23,7 @@ The geometry of the microphone array.
 
 ![alt text](html/img2.png)
 
-The rendering time for the 800x800 image below is approx 10h on Apple M1 (one image per thread).
+The rendering time for the 800x800 image below is approx 5h on Apple M1 (one image per thread).
 
 ![alt text](html/img3.png)
 
