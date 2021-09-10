@@ -31,7 +31,7 @@ Spectrum of the input signal (generated with [Sonogram visible speech](https://g
 
 ![alt text](html/img5.png)
 
-The recordings where made with an Norsonics Nor848A.
+The recordings where made with an Norsonics Nor848A microphone array.
 
 ![alt text](html/img4.png)
 
